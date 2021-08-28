@@ -16,8 +16,15 @@ This repository covers the Data Structures and Algorithms course.
 <br/>
 
 ## Additional material
+### Video lectures
 - [Data Structures in C YouTube Course from FreeCodeCamp](https://www.youtube.com/watch?v=B31LgI4Y4DQ&t=6937s)
 - [Jenny's lectures](https://www.youtube.com/watch?v=AT14lCXuMKI&list=PLdo5W4Nhv31bbKJzrsKfMpo_grxuLl8LU)
+
+### Books
+*Links to be uploaded*
+
+### Past exam papers
+*Links to be uploaded*
 
 <br/>
 
