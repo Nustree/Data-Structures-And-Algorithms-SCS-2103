@@ -4,7 +4,7 @@ This repository covers the Data Structures and Algorithms course.
 
 ## Topics
 - [Array-based lists](https://github.com/Nustree/Data-Structures-And-Algorithms-SCS-2103/tree/main/array-based%20lists)
-- Linked lists: [Singly-linked lists](https://github.com/Nustree/Data-Structures-And-Algorithms-SCS-2103/tree/main/array-based%20lists/linkedlist/singlylinkedlist)
+- Linked lists: [Singly-linked lists](https://github.com/AfricanBongo/Data-Structures-And-Algorithms-SCS-2103/tree/main/linkedlist/singlylinkedlist)
 - Hash tables
 - Recursion
 - Binary Trees
