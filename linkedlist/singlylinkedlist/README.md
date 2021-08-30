@@ -1,6 +1,10 @@
 # Singly-linked list
-```Definition```: Like arrays, Linked List is a linear data structure. Unlike arrays, linked list elements are not stored at a contiguous location; the elements are linked using pointers.
-```[Source]```
+```Definition```: Like arrays, a linked list is a linear data structure. Unlike arrays, linked list elements are not stored at a contiguous loation; the elements are linked using pointers.
+[Source]
+
+Note: [linkedlist] is the compiled C code.
+
+
 ## Singly-linked list pseudocode
 
 ### Inserting at the beginning = O(1)
@@ -50,3 +54,4 @@
 
 <!-- Variable definition -->
 [Source]: https://www.geeksforgeeks.org/linked-list-set-1-introduction/
+[linkedlist]: https://github.com/Nustree/Data-Structures-And-Algorithms-SCS-2103/blob/main/linkedlist/singlylinkedlist/linkedlist
