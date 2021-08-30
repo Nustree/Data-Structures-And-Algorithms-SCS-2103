@@ -13,6 +13,9 @@ void initialize_list();
 void print_list();
 void insert_at_beginning(int value);
 void insert_at_index(int value, int pos);
+void delete(int pos);
+int size_of_list();
+void free_list();
 
 
 // Declare the head pointer as a global variable so that every function can access it.
@@ -25,8 +28,19 @@ int main() {
     // Initialize the linked list and populate with nodes.
     initialize_list();
 
+    // Insert the value at the head of the list.
+    insert_at_index(25, 5);
+
+    // Print the entire list.
     print_list();
 
+    // Delete the value we just inserted.
+    delete(5);
+
+    print_list();
+    
+    // This just frees all the memory allocations for the nodes we created when are we done with the program.
+    free_list();
     return 0;
 }
 
@@ -41,7 +55,7 @@ void initialize_list() {
 // Print all the nodes in a linked list
 void print_list() {
 
-    int i = 0;
+    int i = 1;
 
     printf("\nData in the linked list:\n");
 
@@ -70,4 +84,72 @@ void insert_at_beginning(int value) {
 
     // The head should point to the new node.
     head = new_node;
+}
+
+// Inserts a node at a specific position 'pos' in the linked list.
+void insert_at_index(int value, int pos) {
+    if (pos <= size_of_list()) {
+
+        node *temp = head;
+
+        // Create the node with its value.
+        node *new_node = (node*) malloc(sizeof(node));
+        new_node->value = value;
+
+        // Traverse to the node before the position we want to insert the node.
+        for (int i = 0; i < (pos - 2); i++) temp = temp->next;
+
+        new_node->next = temp->next;
+        temp->next = new_node;
+    }
+}
+
+// Delete a node from the linked list at a specific index 'pos'.
+void delete(int pos) {
+    if (pos < size_of_list()) {
+
+        node *temp = head;
+
+        // If the node to be removed is at the head of the linked list.
+        if (pos == 0) {
+            head = temp->next;
+
+            // Release the memory allocated for the node.
+            free(temp);
+
+            return;
+        } else {
+            // Traverse the node before the one you want to delete.
+            for (int i = 0; i < (pos - 2); i++) temp = temp->next;
+
+            // Get the node that you want to remove.
+            node *removed_node = temp->next;
+
+            // Switch the next node of temp to the next node of removed_node.
+            // This is done to unlink removed_node from the linked list.
+            temp->next = removed_node->next;
+
+            free(removed_node);
+        }
+    }
+}
+
+
+// Get the number of nodes in the linked list.
+int size_of_list() {
+    int size = 0;
+    for (node *temp = head; temp != NULL; temp = temp->next) size++;
+    return size;
+}
+
+// This function frees all the nodes memory allocations.
+// More like a delete-all function.
+void free_list() {
+    node *temp;
+
+    while (head != NULL) {
+        temp = head;
+        head = head->next;
+        free(temp);
+    }
 }
