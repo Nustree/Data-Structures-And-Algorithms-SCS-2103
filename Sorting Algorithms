@@ -1,0 +1,37 @@
+EXPLAIN QUICK SORT AND MERGE SORT ALGORITHMS
+
+Quick sort 
+employs the divide and conquer by dividing the list of elements into two sub elements.
+this algorithm is quite efficient for large sized data sets as its average and worst case complexity are of O(nlogn) where n is the number of items.
+The process is as follows
+Select an element, pivot, from the list.
+Rearrange the elements in the list, so that all elements those are less than the pivot are arranged before the pivot 
+and all elements which are greater than the pivot are arranged  after the pivot. Now the pivot is in its position.
+Sort the both sub lists of the elements which are less than pivot and the lists elements which are more than the pivot recursively.
+
+  QUICK SORT PIVOT ALGORITHM
+  STEP 1. START
+  STEP 2. CHOOSE THE HIGHEST INDEX VALUE AS PIVOT
+  STEP 3. TAKE 2 VARIABLES TO POINT LEFT AND RIGHT OF THE LIST EXCLUDING THE PIVOT
+  STEP 4. LEFT POINT TO THE LOW INDEX
+  STEP 5. RIGHT POINTS TO THE HIGH
+  STEP 6. WHILE VALUE AT THE LEFT IS LESS THAN PIVOT MOVE RIGHT
+  STEP 7. WHILE VALUE AT RIGHT IS GREATER THAN PIVOT MOVE LEFT
+  STEP 8. IF BOTH STEP 5 AND 6 DOES NOT MATCH SWAP LEFT AND RIGHT
+  STEP 9. IF LEFT >= RIGHT, THE POINT WHERE THEY MEET IS THE NEW PIVOT.
+  STEP 10. STOP
+
+Merge sort
+is a sorting technique based on divide and conquer technique.
+with worst case time complexity being O(nlogn), it is one of the most respected algorithms.
+
+Algorithm
+merge sort keeps on dividing the list into equal halves until it can no more be divided
+it combines smaller sorted lists keeping the new list in sorted order.
+
+step 1. Start
+step 2. if it is only one element in the list it is already sorted, return
+step 3. divide the list recursively into two halves until it can nomore be divided
+step 4. merge the smaller lists into new list in a sorted manner.
+step 5. stop.
+
