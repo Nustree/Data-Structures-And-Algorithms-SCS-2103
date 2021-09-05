@@ -32,6 +32,6 @@ it combines smaller sorted lists keeping the new list in sorted order.
 step 1. Start
 step 2. if it is only one element in the list it is already sorted, return
 step 3. divide the list recursively into two halves until it can nomore be divided
-step 4. merge the smaller lists into new list in a sorted manner.
+step 4. merge the smaller lists into new list in a sorted manner
 step 5. stop.
 
